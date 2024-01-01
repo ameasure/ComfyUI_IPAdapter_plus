@@ -595,7 +595,7 @@ class IPAdapterApply:
                             break
                     else:
                         print("\033[33mWARNING!!! InsightFace didn't detect any face.\033[0m")
-
+                        return (model,)
                 face_embed = torch.stack(face_embed, dim=0)
                 neg_image = image_add_noise(image, noise) if noise > 0 else None
                
